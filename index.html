@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
+	<script src="https://cdn.c360a.salesforce.com/beacon/c360a/d4130f08-0500-4051-84ca-1be07a053b0e/scripts/c360a.min.js"></script>
+
+<script>
+SalesforceInteractions.init({
+    consents: [{
+        provider: 'OneTrust',
+        purpose: 'Tracking',
+        status: SalesforceInteractions.ConsentStatus.OptIn
+    }]
+}).then(() => {
+    console.log('init successful');
+});
+</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
