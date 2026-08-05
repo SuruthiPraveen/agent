@@ -141,6 +141,19 @@ SalesforceInteractions.init({
             } else {
                 window.open('https://www.google.com', '_blank');
             }
+			SalesforceInteractions.sendEvent({
+    interaction: {
+        name: "View Catalog Object",
+        catalogObject: {
+            type: "Product",
+            id: '112',
+            attributes: {
+                name: q,
+                sku: '112'
+            }
+        }
+    }
+});
         }
 
         function feelingLucky() {
