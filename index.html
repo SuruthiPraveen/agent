@@ -136,11 +136,6 @@ SalesforceInteractions.init({
     <script>
         function doSearch() {
             const q = document.getElementById('searchInput').value.trim();
-            if (q) {
-                window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
-            } else {
-                window.open('https://www.google.com', '_blank');
-            }
 			SalesforceInteractions.sendEvent({
     interaction: {
         name: "View Catalog Object",
@@ -154,6 +149,13 @@ SalesforceInteractions.init({
         }
     }
 });
+			console.log('sendEvent successful');
+            if (q) {
+                window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+            } else {
+                window.open('https://www.google.com', '_blank');
+            }
+			
         }
 
         function feelingLucky() {
